@@ -4,8 +4,10 @@ Adicionei funções através do js dentro prototype js no plugin canvas do R0J0h
 Ações incluídas no Plugin:
 
 - Request TIFF Data URL (RequestTIFFDataURL):
+
 O que faz: vai requisitar todo o desenho criado no canvas em formato de dataUrl e transformar em formato tiff (permitindo salvar o conteúdo do canvas em Tiff), como é uma requisição assíncrona usei um trigger para validar através do "true" quando o tiff estiver pronto.
 Foi usada a api CanvasToTIFF. Você precisa usar a condição OnAnyTIFFComplete.
+
 Código usado no runtime:
 ```
 acts.RequestTIFFDataURL = function ()
@@ -20,6 +22,7 @@ acts.RequestTIFFDataURL = function ()
 	};
   ```
 - Draw SVG path (drawSVGpath):
+
 O que faz: Desenha no canvas usando path SVG (gráficos). Exemplo: "M150 50 L75 200 L225 200 Z"
 
 Código usado no runtime:
@@ -32,6 +35,7 @@ acts.drawSVGpath = function (pathSVG)
 ```
 
 - Fill path image (fillPattern):
+
 O que faz: Preenche o path(ctx) criado no canvas com uma imagem. A imagem será puxada pelo nome do arquivo incluido no projeto do construct. 
 A imagem será impressa dentro do path criado, sem redimensionar a imagem, ou seja, se ela for maior, vai preencher com a posicão x e y do caminho em relação a imagem. 
 
@@ -53,6 +57,7 @@ acts.fillPattern = function(path_img) {
 }
 ```
 - Fill path image with effect (fillPatternEffect):
+
 O que faz: Preenche o path(ctx) criado no canvas com uma imagem com efeito, que deve ser digitado com o fator. Exemplo de efeitos com fator para digitar: contrast(1.4) sepia(1). 
 A imagem será puxada pelo nome do arquivo incluido no projeto do construct. A imagem será impressa dentro do path criado, sem redimensionar a imagem, ou seja, se ela for maior, vai preencher com a posicão x e y do caminho em relação a imagem. 
 
@@ -80,6 +85,7 @@ acts.fillPatternEffect = function(path_img, effect) {
 Condição incluída no plugin:
  
 - OnAnyTIFFComplete:
+
 O que faz: Retorna verdadeiro quando a transformação do conteúdo do canvas estiver em tiff estiver pronta para poder salvar como Tiff o arquivo.
 
 Código usado no runtime:
