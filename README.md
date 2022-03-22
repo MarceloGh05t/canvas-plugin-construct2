@@ -1,5 +1,5 @@
 # canvas-plugin-construct2
-Adicionei funções através do js dentro prototype js no plugin canvas do R0J0hound para a engine construct2.
+Adicionei funções através do js dentro prototype js no plugin canvas do R0J0hound para a engine construct 2.
 
 Ações incluídas no Plugin:
 
