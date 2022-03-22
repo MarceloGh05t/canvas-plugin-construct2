@@ -76,6 +76,7 @@ acts.fillPatternEffect = function(path_img, effect) {
 }
 ```
 ===============
+
 Condição incluída no plugin:
  
 - OnAnyTIFFComplete:
