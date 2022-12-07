@@ -1,6 +1,27 @@
 # canvas-plugin-construct2
 Adicionei funções através do js dentro prototype js no plugin canvas do R0J0hound para a engine construct 2.
 
+Atualização 07/12/2022
+
+Ações incluídas no Plugin:
+
+- Move Path With Translate (MovePathWithTranslate):
+
+O que faz: Movimenta o caminho (path) para aplicar o desenho no canvas, alterando os valores x e y zero da matrix de identificação do canvas, tornando o ponto movimentado como fosse o ponto zero do path. Precisa usar a outra ação de resetar a matrix (Reset Identity Matrix), vou descrever ela mais abaixo. 
+
+Código usado no runtime:
+```
+acts.MovePathWithTranslate = function(x, y){
+		
+	this.ctx.translate(x, y)
+	}
+```
+
+
+=======================
+
+Atualização anterior
+
 Ações incluídas no Plugin:
 
 - Request TIFF Data URL (RequestTIFFDataURL):
