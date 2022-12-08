@@ -17,6 +17,17 @@ acts.MovePathWithTranslate = function(x, y){
 	}
 ```
 
+- Reset Identity Matrix (ResetIdentityMatrix):
+
+O que faz: reseta a matrix do canvas quando ela for alterada pelo translate (para movimentar um path) ou qualquer outra alteração nela, como rotacionar o path através de alterações da matrix do canvas. Esta ação volta aos valores iniciais da matrix do canvas.
+
+Código usado no runtime:
+```
+acts.ResetIdentityMatrix = function(){
+		
+	this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+	}
+```
 
 =======================
 
