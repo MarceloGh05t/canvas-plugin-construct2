@@ -29,6 +29,25 @@ acts.ResetIdentityMatrix = function(){
 	}
 ```
 
+- Draw Image Natural Size (DrawImageNaturalSize):
+
+O que faz: desenha uma imagem de um arquivo externo no canvas, mas no tamanho original da imagem. A imagem pode ser cortada se aplicada sendo de path criado antes de desenhar a imagem.
+
+Código usado no runtime:
+```
+	acts.DrawImageNaturalSize = function(path_img,x, y){
+	var self = this
+	var ctx = this.ctx
+	var img = new Image()
+	img.src = path_img
+   	img.onload = function() {
+	ctx.drawImage(img, x, y)
+	self.runtime.redraw = true
+	self.update_tex = true	
+	}	
+	}
+```
+
 =======================
 
 Atualização anterior
