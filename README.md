@@ -80,6 +80,14 @@ acts.ClipPath = function(){
 	}
 ```
 
+- Request Canvas To SVG Data (RequestCanvasToSVGData): 
+
+O que faz: transforma o conteúdo ou imagem do canvas em string no formato de arquivo svg, que pode ser salvo ou até baixando como o conteúdo de string e o mine type (application/svg+xml), através do plugin browser com a ação Invoke download of string ou usando outro plugin que salva o conteúdo em arquivo.
+
+Código usado no runtime usa a api do https://github.com/jankovicsandras/imagetracerjs/blob/master/imagetracer_v1.2.6.js, como fica muito grande aqui não vou postar.
+
+
+
 =======================
 
 Atualização anterior
