@@ -31,7 +31,7 @@ acts.ResetIdentityMatrix = function(){
 
 - Draw Image Natural Size (DrawImageNaturalSize):
 
-O que faz: desenha uma imagem de um arquivo externo no canvas, mas no tamanho original da imagem. A imagem pode ser cortada se aplicada sendo de path criado antes de desenhar a imagem.
+O que faz: desenha uma imagem de um arquivo externo no canvas, mas no tamanho original da imagem. A imagem pode ser cortada se aplicada depois de path criado antes de desenhar a imagem.
 
 Código usado no runtime:
 ```
@@ -45,6 +45,38 @@ Código usado no runtime:
 	self.runtime.redraw = true
 	self.update_tex = true	
 	}	
+	}
+```
+
+- Draw Image Scale Size (DrawImageScaleSize):
+
+O que faz: desenha uma imagem de um arquivo externo no canvas, mas permite alterar (diminuir ou aumentar) o tamanho original da imagem. A imagem pode ser cortada se aplicada depois de path criado antes de desenhar a imagem.
+
+Código usado no runtime:
+```
+	acts.DrawImageScaleSize = function(path_img,x, y, width, height){
+	var self = this
+	var ctx = this.ctx
+	var img = new Image()
+	img.src = path_img
+    	img.onload = function() {
+	ctx.drawImage(img, x, y, width, height)
+	self.runtime.redraw = true
+	self.update_tex = true	
+	}
+	}
+```
+
+- Clip Path (ClipPath):
+
+O que faz: Corta o desenho no canvas, usando outro path (caminho) criado para cortar sobre o desenho.
+
+Código usado no runtime:
+```
+acts.ClipPath = function(){
+	var ctx = this.ctx
+	ctx.clip()
+	
 	}
 ```
 
