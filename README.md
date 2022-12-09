@@ -82,11 +82,35 @@ acts.ClipPath = function(){
 
 - Request Canvas To SVG Data (RequestCanvasToSVGData): 
 
-O que faz: transforma o conteúdo ou imagem do canvas em string no formato de arquivo svg, que pode ser salvo ou até baixando como o conteúdo de string e o mine type (application/svg+xml), através do plugin browser com a ação Invoke download of string ou usando outro plugin que salva o conteúdo em arquivo.
+O que faz: transforma o conteúdo ou imagem do canvas em string no formato de arquivo svg, que pode ser salvo ou até baixando como o conteúdo de string e o mine type (application/svg+xml), através do plugin browser com a ação Invoke download of string ou usando outro plugin que salva o conteúdo em arquivo. Como é uma função assicrona, criei a comparação quando a string está pronta (OnCanvasToSvgDataComplete), mas falarei delas mais a frente. 
 
 Código usado no runtime usa a api do https://github.com/jankovicsandras/imagetracerjs/blob/master/imagetracer_v1.2.6.js, como fica muito grande aqui não vou postar.
 
+- Set Origin Point Path (SetOriginPointPath):
 
+O que faz: Define um ponto de origem (x e y) para ser usando no path atual, desta forma pode usar na posicao do path ou até usando MovePathWithTranslate através da matrix usando este ponto. *pretendo criar um sistema de instancia para os paths.
+
+Código usado no runtime:
+```
+acts.SetOriginPointPath = function (x,y)
+	{
+		this.origin_point_path_x = x
+		this.origin_point_path_y = y
+	}
+```
+
+- Set Origin Point Path Only X (SetOriginPointPathOnlyX):
+
+O que faz: Altera somente o x do ponto de origem criado para ser usado no path atual, desta forma pode usar na posicao do path ou até usando MovePathWithTranslate através da matrix usando este ponto. *pretendo criar um sistema de instancia para os paths.
+
+Código usado no runtime:
+```
+acts.SetOriginPointPathOnlyX = function (x)
+	{
+		this.origin_point_path_x = x
+	
+	}
+```
 
 =======================
 
