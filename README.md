@@ -140,6 +140,22 @@ cnds.OnCanvasToSvgDataComplete = function ()
 	};
 ```
 
+- is Point In Stroke Last Path (isPointInStrokeLastPath):
+
+O que faz: Checa se o ponto x e y está colindo na linha do último path (caminho)
+
+Código usado no runtime:
+```
+cnds.isPointInStrokeLastPath = function (x, y)
+	{
+		if(this.ctx.isPointInStroke(x, y)){ //check x and y point stay in stroke of last path
+			
+		return true
+		}	
+	}
+```
+
+-------------------
 
 	
 =======================
