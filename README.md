@@ -159,8 +159,42 @@ cnds.isPointInStrokeLastPath = function (x, y)
 
 Expressões incluídas no Plugin:
 
+- Canvas Svg String (CanvasSvgString):
 
-	
+O que faz: Retorna a string do svg em formato de xml, que pode ser salva ou até baixada como o conteúdo de string e o mine type (application/svg+xml), através do plugin browser com a ação Invoke download of string ou usando outro plugin que salva o conteúdo em arquivo.
+
+Código usado no runtime:
+```
+	exps.CanvasSvgString = function (ret)
+	{
+		ret.set_string(this.svgstr);
+	};
+```	
+
+- Origin Point Path X (OriginPointPathX):
+
+O que faz: Retorna o valor a posição x do ponto de origin criado para o último path.
+
+Código usado no runtime:
+```
+exps.OriginPointPathX = function (ret)
+	{
+		ret.set_float(this.origin_point_path_x)
+	};
+```
+
+- Origin Point Path Y (OriginPointPathY):
+
+O que faz: Retorna o valor a posição y do ponto de origin criado para o último path.
+
+Código usado no runtime:
+```
+	exps.OriginPointPathY = function (ret)
+	{
+		ret.set_float(this.origin_point_path_y)
+	};
+```
+
 =======================
 
 Atualização anterior
@@ -244,8 +278,7 @@ acts.fillPatternEffect = function(path_img, effect) {
     }
 }
 ```
-===============
-
+----------------
 Condição incluída no plugin:
  
 - OnAnyTIFFComplete:
@@ -259,6 +292,7 @@ cnds.OnAnyTIFFComplete = function ()
    return true;
 };
 ```
+--------------------
 
 Expressão incluída no Plugin:
 
