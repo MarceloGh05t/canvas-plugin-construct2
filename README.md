@@ -157,6 +157,9 @@ cnds.isPointInStrokeLastPath = function (x, y)
 
 -------------------
 
+Expressões incluídas no Plugin:
+
+
 	
 =======================
 
@@ -255,4 +258,19 @@ cnds.OnAnyTIFFComplete = function ()
 {
    return true;
 };
+```
+
+Expressão incluída no Plugin:
+
+- Last TIFF Data URL (LastTIFFDataURL):
+
+O que faz: Retorna como url da canvas que foi transformado num arquivo tiff para ser baixado.
+
+Código usado no runtime:
+```
+exps.LastTIFFDataURL = function (ret)
+	{
+		ret.set_string(this.lastURLData);
+	};
+
 ```
