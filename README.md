@@ -126,7 +126,7 @@ Código usado no runtime:
 ```	
 -------------------
 
-Condição incluída no plugin:
+Condições incluídas no plugin:
 
 - On Canvas To Svg Data Complete (OnCanvasToSvgDataComplete):
 
