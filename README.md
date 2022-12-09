@@ -112,6 +112,36 @@ acts.SetOriginPointPathOnlyX = function (x)
 	}
 ```
 
+- Set Origin Point Path Only Y (SetOriginPointPathOnlyY):
+
+O que faz: Altera somente o y do ponto de origem criado para ser usado no path atual, desta forma pode usar na posicao do path ou até usando MovePathWithTranslate através da matrix usando este ponto. *pretendo criar um sistema de instancia para os paths.
+
+Código usado no runtime:
+```
+	acts.SetOriginPointPathOnlyY = function (y)
+	{
+		this.origin_point_path_y = y
+	
+	}
+```	
+-------------------
+
+Condição incluída no plugin:
+
+- On Canvas To Svg Data Complete (OnCanvasToSvgDataComplete):
+
+O que faz: Retorna verdadeiro quando a transformação do conteúdo do canvas em uma string SVG (em formato xml) estiver pronta, que pode ser salva ou até baixada como o conteúdo de string e o mine type (application/svg+xml), através do plugin browser com a ação Invoke download of string ou usando outro plugin que salva o conteúdo em arquivo.
+
+Código usado no runtime:
+```
+cnds.OnCanvasToSvgDataComplete = function () 
+	{
+	return true;
+	};
+```
+
+
+	
 =======================
 
 Atualização anterior
