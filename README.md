@@ -1,4 +1,7 @@
 # canvas-plugin-construct2
+
+Instalação, colocar os arquivos a pasta canvas no caminho: C:\Program Files\Construct 2\exporters\html5\plugins
+
 Adicionei funções através do js dentro prototype js no plugin canvas do R0J0hound para a engine construct 2.
 
 Atualização 07/12/2022
